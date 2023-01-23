@@ -53,7 +53,7 @@ window.plugins.scatter =
         Rank: #{value d['Rank']}
         """
 
-      who.bind 'thumb', (e, thumb) ->
+      who.on 'thumb', (e, thumb) ->
         return if thumb == horz
         wiki.log 'thumb', thumb
         horz = thumb
