@@ -55,7 +55,6 @@ async function emit($item, item) {
 
   const who = $('.chart,.data,.calculator').last()
   const data = who.data('item').data
-  wiki.log('data', data)
   let horz = 'Water / Land Intensity Total'
   const vert = 'Total Score'
   const xdat = (d) => value(d[horz])
@@ -73,7 +72,6 @@ async function emit($item, item) {
     if (thumb == horz) {
       return
     }
-    wiki.log('thumb', thumb)
     horz = thumb
     x = d3.scaleLinear().domain(extent(xdat)).range([0, width])
     d3.selectAll('circle').transition()
@@ -120,7 +118,6 @@ async function emit($item, item) {
         if (!d.shiftKey) {
           page = $item.parents('.page')
         }
-        wiki.log('click', d, page)
         wiki.doInternalLink(d.target.__data__.Material, page)})
       .append('title')
         .text(title)
