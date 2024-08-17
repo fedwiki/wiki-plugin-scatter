@@ -5,9 +5,9 @@
  * https://github.com/fedwiki/wiki-plugin-scatter/blob/master/LICENSE.txt
  */
 
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
 async function emit($item, item) {
-  const d3 = await import('https://cdn.jsdelivr.net/npm/d3@7/+esm')
 
   $item.append(`
     <style>
